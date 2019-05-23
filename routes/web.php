@@ -11,24 +11,7 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
 
-//名前指定なし
-//Route::get('articles', 'ArticlesController@index');
-//Route::get('articles/create', 'ArticlesController@create');//Getリクエストされたときを考えて
-//Route::get('articles/{id}', 'ArticlesController@show');
-////DB保存処理
-//Route::post('articles', 'ArticlesController@store');
-//Route::get('articles/{id}/edit', 'ArticlesController@edit');  // edit
-//Route::patch('articles/{id}', 'ArticlesController@update');  // update
-//Route::delete('articles/{id}', 'ArticlesController@destroy'); //delete
-
-
-
-//// 名前を指定した Route の書き方
-//Route::get('/', 'WelcomeController@index')->name('home');
 Route::get('contact', 'PagesController@contact')->name('contact');
 Route::get('about', 'PagesController@about')->name('about');
 //
@@ -51,11 +34,11 @@ Route::get('/', 'ArticlesController@index')->name('home');
 Route::resource('articles', 'ArticlesController');
 //make:authで自動で作られる
 Auth::routes();
-//homeが二つあるとややこしいため
-//Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+//Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 
+
+// test =================================================================
 //shoppingcart
 Route::get('/demo','DemocartController@demo');
 

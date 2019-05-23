@@ -14,7 +14,7 @@ class AddPublishedAtToArticlesTable extends Migration
     public function up()
     {
         Schema::table('articles', function (Blueprint $table) {
-            //ここに追加項目
+            //追加項目
             $table->timestamp('published_at')->nullable();
         });
     }

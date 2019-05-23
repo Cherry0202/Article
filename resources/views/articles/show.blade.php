@@ -31,14 +31,6 @@
                 {!! delete_form(['articles', $article->id]) !!}
             </a>
         @endauth
-            {{--delete--}}
-{{--            {!! Form::open(['method' => 'DELETE', 'url' => ['articles', $article->id], 'class' => 'd-inline']) !!}--}}
-{{--            {!! Form::submit('削除', ['class' => 'btn btn-danger']) !!}--}}
-{{--            {!! Form::close() !!}--}}
-
-            {{--helper.phpをオートローディングシイェイルため--}}
-            {{--{!! delete_form(['articles', $article->id]) !!}--}}
-
             <a href="{{ action('ArticlesController@index') }}" class="btn btn-secondary float-right">
                 一覧へ戻る
             </a>
