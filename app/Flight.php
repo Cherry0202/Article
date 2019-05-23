@@ -10,7 +10,6 @@ class Flight extends Model
     protected $table = 'my_flights';
     //created_atとupdated_atがいらない場合は牡蠣を入力
     public $timestamps = false;
-    //カラムの名前変更（timestanpを使用しているもののみ）
     const CREATED_AT = 'creation_date';
     const UPDATED_AT = 'last_update';
 

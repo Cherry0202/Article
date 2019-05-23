@@ -6,10 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model
 {
-    //事前に登録できる項目を宣言しておく必要がある
     protected $fillable = ['title', 'body', 'published_at'];
 
-    // published_at で日付ミューテータを使う
     protected $dates = ['published_at'];
 
     public function getTitleAttribute($value)

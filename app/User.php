@@ -30,13 +30,11 @@ class User extends Authenticatable
 
     public function articles()
     {
-        //1:n
         return $this->hasMany('App\Article');
     }
 
     public function user()
     {
-        //n:1
         return $this->belongsTo('App\User');
     }
 }

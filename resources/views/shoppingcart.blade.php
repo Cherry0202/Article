@@ -1,4 +1,6 @@
 {{--// Display the content in a View.--}}
+
+{{--　test --}}
 <table>
     <thead>
     <tr>

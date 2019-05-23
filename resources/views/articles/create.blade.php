@@ -17,9 +17,6 @@
     </ul>
 </div>
 @endif
-{{--直パス--}}
-{{--{!! Form::open(['url' => 'articles']) !!}--}}
-{{--名前指定--}}
 {!! Form::open(['route' => 'articles.store']) !!}
 <div class="form-group">
     {!! Form::label('title', 'Title:') !!}

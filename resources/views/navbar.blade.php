@@ -11,20 +11,6 @@
 
         <!-- メニュー -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- 左寄せメニュー -->
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('home') }}">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('about') }}">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('contact') }}">Contact</a>
-                </li>
-            </ul>
-
-            <!-- 右寄せメニュー -->
             <ul class="navbar-nav">
             {{-- ゲスト時の表示メニュー --}}
             @guest
@@ -38,12 +24,6 @@
                         <a class="nav-link" href="{{ route('register') }}">Register</a>
                     </li>
             @else
-                <!-- ログインしている時のメニュー -->
-                    <li class="nav-item">
-                        {{--  リンク先にダッシュボードヘのルートを指定 --}}
-                        <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
-                    </li>
-
                     <!-- ドロップダウンメニュー -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -52,16 +32,13 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            {{-- ❷
-                            クリックされた時にの logout-form を submit するように javascript で記述 --}}
                             <a class="dropdown-item" href="#"
                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
                             >
                                 Logout
                             </a>
 
-                            {{--❶
-                             ❷のCSRF対策--}}
+                            {{--CSRF対策--}}
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>
